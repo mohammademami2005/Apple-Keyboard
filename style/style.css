@@ -1,0 +1,209 @@
+@import url(root.css);
+
+body {
+  background-color: var(--bodyBackgroundColor);
+  overflow: auto;
+
+  > main {
+    width: 1400px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5%;
+
+    > section {
+      width: 200vw;
+      height: 50vh;
+
+      border-radius: 13px;
+      box-shadow: -30px -30px 30px var(--keyboardShadow);
+      background-color: var(--keyboardColor);
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 4.66fr 1fr 1.34fr;
+      gap: 25px;
+
+      > div {
+        display: grid;
+        grid-template-rows: 2fr repeat(5, 3fr);
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 1.5%;
+        padding-right: 0;
+
+        > div {
+          display: grid;
+          gap: 12px;
+
+          > button {
+            color: var(--keysColor);
+            font-size: var(--keysFontSize);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: -5px -5px 6px var(--keyboardShadow),
+              -0.05em -0.05em 0.02em rgba(255, 255, 255, 0.8) inset;
+            border-radius: 8px;
+            border: 1px solid gray;
+            border: unset;
+          }
+        }
+
+        &:nth-of-type(1) {
+          /* background-color: red; */
+
+          > div {
+            /* display: grid; */
+            /* border: 1px solid black; */
+            /* gap: 12px; */
+            /* > button {
+              color: var(--keysColor);
+              font-size: var(--keysFontSize);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: -5px -5px 6px var(--keyboardShadow),
+                -0.05em -0.05em 0.02em rgba(255, 255, 255, 0.8) inset;
+              border-radius: 5px;
+              border: 1px solid gray;
+              border: unset;
+            } */
+            &:nth-of-type(1) {
+              grid-template-columns: repeat(14, 1fr);
+            }
+
+            &:nth-of-type(2) {
+              grid-template-columns: repeat(15, 1fr);
+
+              > button {
+                width: 100%;
+                &:nth-of-type(14) {
+                  grid-column: 14 / span 2;
+                  width: auto;
+                }
+              }
+            }
+            &:nth-of-type(3) {
+              grid-template-columns: repeat(15, 1fr);
+
+              > button {
+                width: 100%;
+                &:nth-of-type(1) {
+                  grid-column: 1 / span 2;
+                }
+              }
+            }
+
+            &:nth-of-type(4) {
+              grid-template-columns: repeat(17, 1fr);
+
+              > button {
+                width: 100%;
+                &:nth-of-type(1) {
+                  grid-column: 1 / span 3;
+                }
+
+                &:nth-of-type(13) {
+                  grid-column: 15 / span 3;
+                }
+              }
+            }
+
+            &:nth-of-type(5) {
+              grid-template-columns: repeat(18, 1fr);
+
+              > button {
+                &:nth-of-type(1) {
+                  grid-column: 1 / span 4;
+                }
+                &:nth-of-type(12) {
+                  grid-column: 15 / span 4;
+                }
+              }
+            }
+            &:nth-of-type(6) {
+              grid-template-columns: repeat(10, 1fr);
+              gap: 8px;
+              > button {
+                color: var(--keysColor);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:nth-of-type(4) {
+                  grid-column: 4 / span 4;
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          padding-block: 13px;
+          > div {
+            /* display: grid; */
+            /* gap: 12px; */
+
+            grid-template-columns: repeat(3, 1fr);
+
+            /* > button {
+              color: var(--keysColor);
+              font-size: var(--keysFontSize);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: -5px -5px 6px var(--keyboardShadow),
+                -0.05em -0.05em 0.02em rgba(255, 255, 255, 0.8) inset;
+              border-radius: 5px;
+              border: 1px solid gray;
+              border: unset;
+            } */
+            &:nth-of-type(5) {
+              > button {
+                grid-column: 2 / span 1;
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          padding-block: 13px;
+          grid-template-rows: 2fr repeat(3, 3fr) 6fr;
+          margin-right: 12px;
+
+          > div {
+            /* display: grid; */
+            grid-template-columns: repeat(4, 1fr);
+            /* gap: 12px; */
+
+            /* > button {
+              color: var(--keysColor);
+              font-size: var(--keysFontSize);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: -5px -5px 6px var(--keyboardShadow),
+                -0.05em -0.05em 0.02em rgba(255, 255, 255, 0.8) inset;
+              border-radius: 5px;
+              border: 1px solid gray;
+              border: unset;
+            } */
+
+            &:nth-of-type(5) {
+              > button {
+                &:nth-of-type(1) {
+                  grid-column: 4 / span 1;
+                  grid-row: 1 / span 2;
+                }
+                &:nth-of-type(5) {
+                  grid-column: 1 / span 2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

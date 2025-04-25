@@ -1,0 +1,25 @@
+:root{
+    --bodyBackgroundColor:#ffffff;
+    --keyboardColor:#bababa;
+    --keyboardShadow:#959595;
+    --keysBackgroundColor:#ededed;
+    --keysColor:#787878;
+    --keysFontSize:12px;
+    
+}
+
+* , *::after , *::before{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    /* font-size: var(--keysFontSize); */
+}
